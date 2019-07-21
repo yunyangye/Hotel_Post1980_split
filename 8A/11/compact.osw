@@ -1,0 +1,72 @@
+{
+	"weather_file": "8A.epw",
+	"seed_file": "CZ8A.osm",
+	"steps": [
+		{
+			"measure_dir_name": "ChangeInsulationRValueForExteriorWalls",
+			"arguments": {
+				"r_value": 18.8362349191		
+			}
+		},
+		{
+			"measure_dir_name": "ChangeInsulationRValueForRoofs",
+			"arguments": {
+				"r_value_roof": 20.2326921905
+			}
+		},
+		{
+			"measure_dir_name": "ChangeUValueandSHGCOfWindows",
+			"arguments": {
+				"window_u_value_ip": 1.1321834264,
+				"window_shgc": 0.633601349951
+			}
+		},
+		{
+			"measure_dir_name": "ReplaceLightsInSpaceTypeWithLPD",
+			"arguments": {
+				"lpd": 18.7206953044
+			}
+		},
+		{
+			"measure_dir_name": "SetHeatingandCoolingSizingFactors",
+			"arguments": {
+				"htg_sz_factor": 1.464575545,
+				"clg_sz_factor": 1.29514853992
+			}
+		},
+		{
+			"measure_dir_name": "SetWaterHeaterEfficiency",
+			"arguments": {
+				"heater_fuel_type_widget": "NaturalGas",
+				"heater_thermal_efficiency": 0.791406028997
+			}
+		},
+		{
+			"measure_dir_name": "ChangeElectricEquipmentLoadsByPercentage",
+			"arguments": {
+				"elecequip_power_change_percent": -27.1099877134
+			}
+		},
+		{
+			"measure_dir_name": "AddOverhangsByProjectionFactor",
+			"arguments": {
+				"projection_factor": 0.201235150403		
+			}
+		},
+		{
+			"measure_dir_name": "ChangeOutdoorAir",
+			"arguments": {
+				"design_spec_outdoor_air_per_person": 11.4019854439
+			}
+		},
+		{
+			"measure_dir_name": "ResizeExistingWindowsToMatchAGivenWWR",
+			"arguments": {
+				"wwr": 0.256936074538,
+				"check_wall": true,
+				"check_outdoors": true,
+				"check_sunexposed": true	
+			}
+		}
+	]
+}

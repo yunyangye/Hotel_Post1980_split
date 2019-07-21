@@ -1,0 +1,48 @@
+{
+  "ChangeInsulationRValueForExteriorWalls": {
+    "r_value": 18.8362349191,
+    "applicable": true
+  },
+  "ChangeInsulationRValueForRoofs": {
+    "r_value_roof": 20.2326921905,
+    "applicable": true
+  },
+  "ChangeUValueandSHGCOfWindows": {
+    "window_u_value_ip": 1.1321834264,
+    "window_shgc": 0.633601349951,
+    "applicable": true
+  },
+  "ReplaceLightsInSpaceTypeWithLPD": {
+    "lpd": 18.7206953044,
+    "applicable": true
+  },
+  "SetHeatingandCoolingSizingFactors": {
+    "htg_sz_factor": 1.464575545,
+    "clg_sz_factor": 1.29514853992,
+    "applicable": true
+  },
+  "SetWaterHeaterEfficiency": {
+    "heater_fuel_type_widget": "0",
+    "heater_thermal_efficiency": 0.791406028997,
+    "applicable": true
+  },
+  "ChangeElectricEquipmentLoadsByPercentage": {
+    "elecequip_power_change_percent": -27.1099877134,
+    "applicable": true
+  },
+  "AddOverhangsByProjectionFactor": {
+    "projection_factor": 0.201235150403,
+    "applicable": true
+  },
+  "ChangeOutdoorAir": {
+    "design_spec_outdoor_air_per_person": 11.4019854439,
+    "applicable": true
+  },
+  "ResizeExistingWindowsToMatchAGivenWWR": {
+    "wwr": 0.256936074538,
+    "check_wall": true,
+    "check_outdoors": true,
+    "check_sunexposed": true,
+    "applicable": true
+  }
+}

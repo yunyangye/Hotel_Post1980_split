@@ -1,0 +1,276 @@
+Program Version,EnergyPlus, Version 9.0.1-bb7ca4f0da, YMD=2019.07.19 03:39
+! <Version>, Version ID
+ Version, 9.0
+! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
+ Timesteps per Hour,  6, 10
+! <System Convergence Limits>, Minimum System TimeStep {minutes}, Max HVAC Iterations, Minimum Plant Iterations, Maximum Plant Iterations
+ System Convergence Limits, 2, 25, 2, 8
+! <Simulation Control>, Do Zone Sizing, Do System Sizing, Do Plant Sizing, Do Design Days, Do Weather Simulation, Do HVAC Sizing Simulation
+ Simulation Control, Yes, Yes, Yes, No, Yes, No
+! <Output Reporting Tolerances>, Tolerance for Time Heating Setpoint Not Met, Tolerance for Zone Cooling Setpoint Not Met Time
+ Output Reporting Tolerances, 0.200, 0.200, 
+! <Site:GroundTemperature:BuildingSurface>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:BuildingSurface,  22.51,  22.64,  22.78,  22.96,  23.05,  23.08,  23.12,  23.11,  23.13,  23.14,  23.08,  22.91
+! <Site:GroundTemperature:FCfactorMethod>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:FCfactorMethod, -19.05, -15.75,  -9.32,  -3.24,   8.27,  14.33,  16.00,  12.93,   5.83,  -3.02, -11.73, -17.48
+! <Site:GroundTemperature:Shallow>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Shallow,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00
+! <Site:GroundTemperature:Deep>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Deep,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00
+! <Site:GroundReflectance>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:SnowModifier>, Normal, Daylighting {dimensionless}
+ Site:GroundReflectance:SnowModifier,   1.000,   1.000
+! <Site:GroundReflectance:Snow>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:Snow:Daylighting>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow:Daylighting,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Environment:Weather Station>,Wind Sensor Height Above Ground {m},Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Sensor Height Above Ground {m},Wind Speed Modifier Coefficient-Internal,Temperature Modifier Coefficient-Internal
+Environment:Weather Station,10.000,0.140,270.000,1.500,1.586,9.750E-003
+! <Site:Location>, Location Name, Latitude {N+/S- Deg}, Longitude {E+/W- Deg},  Time Zone Number {GMT+/-}, Elevation {m},  Standard Pressure at Elevation {Pa}, Standard RhoAir at Elevation
+Site:Location,FAIRBANKS INTL ARPT AK USA Source TMY3 WMO#=702610,64.82,-147.85,-9.00,133.00,99737,1.1854
+! <Site Water Mains Temperature Information>,Calculation Method{},Water Mains Temperature Schedule Name{},Annual Average Outdoor Air Temperature{C},Maximum Difference In Monthly Average Outdoor Air Temperatures{deltaC},Fixed Default Water Mains Temperature{C}
+Site Water Mains Temperature Information,Correlation,NA,24.49,8.70,NA
+! <Building Information>, Building Name,North Axis {deg},Terrain,  Loads Convergence Tolerance Value,Temperature Convergence Tolerance Value,  Solar Distribution,Maximum Number of Warmup Days,Minimum Number of Warmup Days
+ Building Information,DOE Ref 1980-2004-LargeHotel-ASHRAE 169-2006-1A created: 2017-12-25 16:13:06 -0700,0.000,City,4.00000E-002,0.20000,FullInteriorAndExterior,25,6
+! <Inside Convection Algorithm>, Algorithm {Simple | TARP | CeilingDiffuser | AdaptiveConvectionAlgorithm}
+Inside Convection Algorithm,TARP
+! <Outside Convection Algorithm>, Algorithm {SimpleCombined | TARP | MoWitt | DOE-2 | AdaptiveConvectionAlgorithm}
+Outside Convection Algorithm,DOE-2
+! <Sky Radiance Distribution>, Value {Anisotropic}
+Sky Radiance Distribution,Anisotropic
+! <Zone Air Solution Algorithm>, Value {ThirdOrderBackwardDifference | AnalyticalSolution | EulerMethod}
+ Zone Air Solution Algorithm, ThirdOrderBackwardDifference
+! <Zone Air Carbon Dioxide Balance Simulation>, Simulation {Yes/No}, Carbon Dioxide Concentration
+ Zone Air Carbon Dioxide Balance Simulation, No,N/A
+! <Zone Air Generic Contaminant Balance Simulation>, Simulation {Yes/No}, Generic Contaminant Concentration
+ Zone Air Generic Contaminant Balance Simulation, No,N/A
+! <Zone Air Mass Flow Balance Simulation>, Enforce Mass Balance, Adjust Zone Mixing, Adjust Zone Infiltration {AddInfiltration | AdjustInfiltration | None}, Infiltration Zones {MixingSourceZonesOnly | AllZones}
+ Zone Air Mass Flow Balance Simulation, No,N/A,N/A,N/A
+! <HVACSystemRootFindingAlgorithm>, Value {RegulaFalsi | Bisection | BisectionThenRegulaFalsi | RegulaFalsiThenBisection}
+ HVACSystemRootFindingAlgorithm, RegulaFalsi
+! <Environment:Site Atmospheric Variation>,Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Gradient Coefficient {K/m}
+Environment:Site Atmospheric Variation,0.330,460.000,6.500000E-003
+! <Surface Geometry>,Starting Corner,Vertex Input Direction,Coordinate System,Daylight Reference Point Coordinate System,Rectangular (Simple) Surface Coordinate System
+ Surface Geometry,UpperLeftCorner,Counterclockwise,RelativeCoordinateSystem,RelativeCoordinateSystem,RelativeToZoneOrigin
+! <Surface Heat Transfer Algorithm>, Value {CTF - ConductionTransferFunction | EMPD - MoisturePenetrationDepthConductionTransferFunction | CondFD - ConductionFiniteDifference | HAMT - CombinedHeatAndMoistureFiniteElement} - Description,Inside Surface Max Temperature Limit{C}, Surface Convection Coefficient Lower Limit {W/m2-K}, Surface Convection Coefficient Upper Limit {W/m2-K}
+Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.0
+! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
+ Shading Summary,0,2,0
+! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
+ Zone Summary,22,231,30
+! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
+ Zone Information, BANQUET_FLR_6 ZN,0.0,0.00,0.00,0.00,26.37,17.68,17.68,1,1,1,10.36,42.37,12.50,22.86,16.15,19.20,3.05,1010.89,TARP,DOE-2,331.66,97.55,67.83,29.72,6,1,0,Yes
+ Zone Information, BASEMENT ZN,0.0,0.00,0.00,0.00,41.45,11.51,-1.22,1,1,1,0.00,86.56,0.00,22.86,-2.44,0.00,2.44,4826.37,TARP,DOE-2,1978.83,0.00,0.00,0.00,13,0,0,Yes
+ Zone Information, CAFE_FLR_1 ZN,0.0,0.00,0.00,0.00,70.26,2.90,1.98,1,1,1,53.95,86.56,0.00,5.79,0.00,3.96,3.96,748.35,TARP,DOE-2,188.86,152.17,91.62,60.55,7,1,0,Yes
+ Zone Information, CORRIDOR_FLR_3 ZN,0.0,0.00,0.00,0.00,43.28,14.33,8.53,1,4,1,4.57,81.99,5.79,22.86,7.01,10.06,3.05,1186.91,TARP,DOE-2,389.40,48.31,33.60,14.71,20,4,0,Yes
+ Zone Information, CORRIDOR_FLR_6 ZN,0.0,0.00,0.00,0.00,41.51,13.35,17.68,1,1,1,4.57,81.99,5.79,22.86,16.15,19.20,3.05,1256.16,TARP,DOE-2,412.12,85.47,59.43,26.04,15,3,0,Yes
+ Zone Information, DINING_FLR_6 ZN,0.0,0.00,0.00,0.00,63.55,17.68,17.68,1,1,1,47.55,79.55,12.50,22.86,16.15,19.20,3.05,1010.89,TARP,DOE-2,331.66,97.55,67.83,29.72,6,1,0,Yes
+ Zone Information, KITCHEN_FLR_6 ZN,0.0,0.00,0.00,0.00,82.99,14.11,17.68,1,1,1,79.55,86.56,5.79,22.86,16.15,19.20,3.05,314.87,TARP,DOE-2,103.30,87.33,62.98,24.34,8,3,0,Yes
+ Zone Information, LAUNDRY_FLR_1 ZN,0.0,0.00,0.00,0.00,84.28,14.33,1.98,1,1,1,81.99,86.56,5.79,22.86,0.00,3.96,3.96,309.22,TARP,DOE-2,78.04,85.75,85.75,0.00,6,0,0,Yes
+ Zone Information, LOBBY_FLR_1 ZN,0.0,0.00,0.00,0.00,38.29,12.45,1.98,1,1,1,0.00,81.99,0.00,22.86,0.00,3.96,3.96,5183.56,TARP,DOE-2,1308.19,434.79,356.13,78.66,18,1,0,Yes
+ Zone Information, MECH_FLR_1 ZN,0.0,0.00,0.00,0.00,61.87,17.68,1.98,1,1,1,53.95,69.80,12.50,22.86,0.00,3.96,3.96,650.80,TARP,DOE-2,164.24,62.80,62.80,0.00,6,0,0,Yes
+ Zone Information, RETAIL_1_FLR_1 ZN,0.0,0.00,0.00,0.00,5.79,2.90,1.98,1,1,1,0.00,11.58,0.00,5.79,0.00,3.96,3.96,265.76,TARP,DOE-2,67.07,68.84,47.34,21.50,6,1,0,Yes
+ Zone Information, RETAIL_2_FLR_1 ZN,0.0,0.00,0.00,0.00,5.79,9.14,1.98,1,1,1,0.00,11.58,5.79,12.50,0.00,3.96,3.96,307.76,TARP,DOE-2,77.67,26.57,26.57,0.00,6,0,0,Yes
+ Zone Information, ROOM_1_FLR_3 ZN,0.0,0.00,0.00,0.00,2.29,10.06,8.53,1,4,1,0.00,4.57,5.79,14.33,7.01,10.06,3.05,118.94,TARP,DOE-2,39.02,39.95,27.79,12.16,6,2,0,Yes
+ Zone Information, ROOM_1_FLR_6 ZN,0.0,0.00,0.00,0.00,2.29,10.06,17.68,1,1,1,0.00,4.57,5.79,14.33,16.15,19.20,3.05,118.94,TARP,DOE-2,39.02,39.95,27.78,12.17,6,2,0,Yes
+ Zone Information, ROOM_2_FLR_3 ZN,0.0,0.00,0.00,0.00,2.29,18.59,8.53,1,4,1,0.00,4.57,14.33,22.86,7.01,10.06,3.05,118.93,TARP,DOE-2,39.02,39.95,27.78,12.16,6,2,0,Yes
+ Zone Information, ROOM_2_FLR_6 ZN,0.0,0.00,0.00,0.00,2.29,18.59,17.68,1,1,1,0.00,4.57,14.33,22.86,16.15,19.20,3.05,118.93,TARP,DOE-2,39.02,39.95,27.77,12.17,6,2,0,Yes
+ Zone Information, ROOM_3_MULT19_FLR_3 ZN,0.0,0.00,0.00,0.00,8.53,9.14,8.53,1,76,1,6.71,10.36,5.79,12.50,7.01,10.06,3.05,74.75,TARP,DOE-2,24.52,11.15,7.75,3.39,6,1,0,Yes
+ Zone Information, ROOM_3_MULT9_FLR_6 ZN,0.0,0.00,0.00,0.00,7.93,7.62,17.68,1,9,1,4.57,11.28,5.79,9.45,16.15,19.20,3.05,74.77,TARP,DOE-2,24.53,20.44,14.21,6.23,6,1,0,Yes
+ Zone Information, ROOM_4_MULT19_FLR_3 ZN,0.0,0.00,0.00,0.00,12.19,19.51,8.53,1,76,1,10.36,14.02,16.15,22.86,7.01,10.06,3.05,74.77,TARP,DOE-2,24.53,11.15,7.76,3.39,6,1,0,Yes
+ Zone Information, ROOM_5_FLR_3 ZN,0.0,0.00,0.00,0.00,84.28,10.06,8.53,1,4,1,81.99,86.56,5.79,14.33,7.01,10.06,3.05,118.94,TARP,DOE-2,39.02,39.95,27.79,12.16,6,2,0,Yes
+ Zone Information, ROOM_6_FLR_3 ZN,0.0,0.00,0.00,0.00,84.28,18.59,8.53,1,4,1,81.99,86.56,14.33,22.86,7.01,10.06,3.05,118.93,TARP,DOE-2,39.02,39.95,27.78,12.16,6,2,0,Yes
+ Zone Information, STORAGE_FLR_1 ZN,0.0,0.00,0.00,0.00,74.37,17.68,1.98,1,1,1,69.80,78.94,12.50,22.86,0.00,3.96,3.96,375.47,TARP,DOE-2,94.76,36.23,36.23,0.00,6,0,0,Yes
+! <Zone Internal Gains Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
+ Zone Internal Gains Nominal, BANQUET_FLR_6 ZN,331.66,14.3,23.226,4.306E-002,37.587,67.811,0.000,0.000,0.000,0.000,105.398,No
+ Zone Internal Gains Nominal, BASEMENT ZN,1978.83,85.2,23.226,4.306E-002,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+ Zone Internal Gains Nominal, CAFE_FLR_1 ZN,188.86,8.1,23.226,4.306E-002,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+ Zone Internal Gains Nominal, CORRIDOR_FLR_3 ZN,389.40,16.8,23.226,4.306E-002,37.587,0.000,0.000,0.000,0.000,0.000,37.587,No
+ Zone Internal Gains Nominal, CORRIDOR_FLR_6 ZN,412.12,17.7,23.226,4.306E-002,37.587,0.000,0.000,0.000,0.000,0.000,37.587,No
+ Zone Internal Gains Nominal, DINING_FLR_6 ZN,331.66,14.3,23.226,4.306E-002,37.587,67.811,0.000,0.000,0.000,0.000,105.398,No
+ Zone Internal Gains Nominal, KITCHEN_FLR_6 ZN,103.30,4.4,23.226,4.306E-002,37.587,514.199,1611.996,0.000,0.000,0.000,2163.781,No
+ Zone Internal Gains Nominal, LAUNDRY_FLR_1 ZN,78.04,3.4,23.226,4.306E-002,37.587,62.750,536.280,0.000,0.000,0.000,636.617,No
+ Zone Internal Gains Nominal, LOBBY_FLR_1 ZN,1308.19,56.3,23.226,4.306E-002,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+ Zone Internal Gains Nominal, MECH_FLR_1 ZN,164.24,0.0,N/A,0.000,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+ Zone Internal Gains Nominal, RETAIL_1_FLR_1 ZN,67.07,2.9,23.226,4.306E-002,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+ Zone Internal Gains Nominal, RETAIL_2_FLR_1 ZN,77.67,3.3,23.226,4.306E-002,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+ Zone Internal Gains Nominal, ROOM_1_FLR_3 ZN,39.02,1.7,23.226,4.306E-002,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+ Zone Internal Gains Nominal, ROOM_1_FLR_6 ZN,39.02,1.7,23.226,4.306E-002,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+ Zone Internal Gains Nominal, ROOM_2_FLR_3 ZN,39.02,1.7,23.226,4.306E-002,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+ Zone Internal Gains Nominal, ROOM_2_FLR_6 ZN,39.02,1.7,23.226,4.306E-002,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+ Zone Internal Gains Nominal, ROOM_3_MULT19_FLR_3 ZN,24.52,1.1,23.226,4.306E-002,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+ Zone Internal Gains Nominal, ROOM_3_MULT9_FLR_6 ZN,24.53,1.1,23.226,4.306E-002,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+ Zone Internal Gains Nominal, ROOM_4_MULT19_FLR_3 ZN,24.53,1.1,23.226,4.306E-002,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+ Zone Internal Gains Nominal, ROOM_5_FLR_3 ZN,39.02,1.7,23.226,4.306E-002,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+ Zone Internal Gains Nominal, ROOM_6_FLR_3 ZN,39.02,1.7,23.226,4.306E-002,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+ Zone Internal Gains Nominal, STORAGE_FLR_1 ZN,94.76,4.1,23.226,4.306E-002,37.587,9.876,0.000,0.000,0.000,0.000,47.463,No
+! <People Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Number of People {},People/Floor Area {person/m2},Floor Area per person {m2/person},Fraction Radiant,Fraction Convected,Sensible Fraction Calculation,Activity level,ASHRAE 55 Warnings,Carbon Dioxide Generation Rate,Nominal Minimum Number of People,Nominal Maximum Number of People
+ People Internal Gains Nominal, BANQUET_FLR_6 ZN LARGEHOTEL BANQUET PEOPLE,LARGEHOTEL BLDG OCC,BANQUET_FLR_6 ZN,331.66,14.3,14.3,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,14
+ People Internal Gains Nominal, DINING_FLR_6 ZN LARGEHOTEL BANQUET PEOPLE,LARGEHOTEL BLDG OCC,DINING_FLR_6 ZN,331.66,14.3,14.3,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,14
+ People Internal Gains Nominal, BASEMENT ZN LARGEHOTEL BASEMENT PEOPLE,LARGEHOTEL BLDG OCC,BASEMENT ZN,1978.83,85.2,85.2,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,85
+ People Internal Gains Nominal, CAFE_FLR_1 ZN LARGEHOTEL CAFE PEOPLE,LARGEHOTEL BLDG OCC,CAFE_FLR_1 ZN,188.86,8.1,8.1,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,8
+ People Internal Gains Nominal, CORRIDOR_FLR_6 ZN LARGEHOTEL CORRIDOR PEOPLE,LARGEHOTEL BLDG OCC,CORRIDOR_FLR_6 ZN,412.12,17.7,17.7,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,18
+ People Internal Gains Nominal, CORRIDOR_FLR_3 ZN LARGEHOTEL CORRIDOR2 PEOPLE,LARGEHOTEL BLDG OCC,CORRIDOR_FLR_3 ZN,389.40,16.8,16.8,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,17
+ People Internal Gains Nominal, ROOM_1_FLR_3 ZN LARGEHOTEL GUESTROOM PEOPLE,LARGEHOTEL BLDG OCC,ROOM_1_FLR_3 ZN,39.02,1.7,1.7,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,2
+ People Internal Gains Nominal, ROOM_2_FLR_3 ZN LARGEHOTEL GUESTROOM PEOPLE,LARGEHOTEL BLDG OCC,ROOM_2_FLR_3 ZN,39.02,1.7,1.7,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,2
+ People Internal Gains Nominal, ROOM_5_FLR_3 ZN LARGEHOTEL GUESTROOM PEOPLE,LARGEHOTEL BLDG OCC,ROOM_5_FLR_3 ZN,39.02,1.7,1.7,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,2
+ People Internal Gains Nominal, ROOM_6_FLR_3 ZN LARGEHOTEL GUESTROOM PEOPLE,LARGEHOTEL BLDG OCC,ROOM_6_FLR_3 ZN,39.02,1.7,1.7,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,2
+ People Internal Gains Nominal, ROOM_3_MULT19_FLR_3 ZN LARGEHOTEL GUESTROOM2 PEOPLE,LARGEHOTEL BLDG OCC,ROOM_3_MULT19_FLR_3 ZN,24.52,1.1,1.1,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,1
+ People Internal Gains Nominal, ROOM_4_MULT19_FLR_3 ZN LARGEHOTEL GUESTROOM2 PEOPLE,LARGEHOTEL BLDG OCC,ROOM_4_MULT19_FLR_3 ZN,24.53,1.1,1.1,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,1
+ People Internal Gains Nominal, ROOM_1_FLR_6 ZN LARGEHOTEL GUESTROOM3 PEOPLE,LARGEHOTEL BLDG OCC,ROOM_1_FLR_6 ZN,39.02,1.7,1.7,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,2
+ People Internal Gains Nominal, ROOM_2_FLR_6 ZN LARGEHOTEL GUESTROOM3 PEOPLE,LARGEHOTEL BLDG OCC,ROOM_2_FLR_6 ZN,39.02,1.7,1.7,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,2
+ People Internal Gains Nominal, ROOM_3_MULT9_FLR_6 ZN LARGEHOTEL GUESTROOM4 PEOPLE,LARGEHOTEL BLDG OCC,ROOM_3_MULT9_FLR_6 ZN,24.53,1.1,1.1,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,1
+ People Internal Gains Nominal, KITCHEN_FLR_6 ZN LARGEHOTEL KITCHEN PEOPLE,LARGEHOTEL BLDG OCC,KITCHEN_FLR_6 ZN,103.30,4.4,4.4,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,4
+ People Internal Gains Nominal, LAUNDRY_FLR_1 ZN LARGEHOTEL LAUNDRY PEOPLE,LARGEHOTEL BLDG OCC,LAUNDRY_FLR_1 ZN,78.04,3.4,3.4,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,3
+ People Internal Gains Nominal, LOBBY_FLR_1 ZN LARGEHOTEL LOBBY PEOPLE,LARGEHOTEL BLDG OCC,LOBBY_FLR_1 ZN,1308.19,56.3,56.3,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,56
+ People Internal Gains Nominal, RETAIL_1_FLR_1 ZN LARGEHOTEL RETAIL PEOPLE,LARGEHOTEL BLDG OCC,RETAIL_1_FLR_1 ZN,67.07,2.9,2.9,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,3
+ People Internal Gains Nominal, RETAIL_2_FLR_1 ZN LARGEHOTEL RETAIL2 PEOPLE,LARGEHOTEL BLDG OCC,RETAIL_2_FLR_1 ZN,77.67,3.3,3.3,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,3
+ People Internal Gains Nominal, STORAGE_FLR_1 ZN LARGEHOTEL STORAGE PEOPLE,LARGEHOTEL BLDG OCC,STORAGE_FLR_1 ZN,94.76,4.1,4.1,4.306E-002,23.226,0.300,0.700,AutoCalculate,LARGEHOTEL ACTIVITY,No,3.8200E-008,0,4
+! <Lights Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Lighting Level {W},Lights/Floor Area {W/m2},Lights per person {W/person},Fraction Return Air,Fraction Radiant,Fraction Short Wave,Fraction Convected,Fraction Replaceable,End-Use Category,Nominal Minimum Lighting Level {W},Nominal Maximum Lighting Level {W}
+ Lights Internal Gains Nominal, BANQUET_FLR_6 ZN LARGEHOTEL BANQUET LIGHTS,LARGEHOTEL BLDG LIGHT,BANQUET_FLR_6 ZN,331.66,14.3,12465.873,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,12465.873
+ Lights Internal Gains Nominal, DINING_FLR_6 ZN LARGEHOTEL BANQUET LIGHTS,LARGEHOTEL BLDG LIGHT,DINING_FLR_6 ZN,331.66,14.3,12465.873,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,12465.873
+ Lights Internal Gains Nominal, BASEMENT ZN LARGEHOTEL BASEMENT LIGHTS,LARGEHOTEL BLDG LIGHT,BASEMENT ZN,1978.83,85.2,74377.482,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,74377.482
+ Lights Internal Gains Nominal, CAFE_FLR_1 ZN LARGEHOTEL CAFE LIGHTS,LARGEHOTEL BLDG LIGHT,CAFE_FLR_1 ZN,188.86,8.1,7098.675,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,7098.675
+ Lights Internal Gains Nominal, CORRIDOR_FLR_6 ZN LARGEHOTEL CORRIDOR LIGHTS,LARGEHOTEL BLDG LIGHT,CORRIDOR_FLR_6 ZN,412.12,17.7,15490.363,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,15490.363
+ Lights Internal Gains Nominal, CORRIDOR_FLR_3 ZN LARGEHOTEL CORRIDOR2 LIGHTS,LARGEHOTEL BLDG LIGHT,CORRIDOR_FLR_3 ZN,389.40,16.8,14636.395,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,14636.395
+ Lights Internal Gains Nominal, ROOM_1_FLR_3 ZN LARGEHOTEL GUESTROOM LIGHTS,LARGEHOTEL BLDG LIGHT,ROOM_1_FLR_3 ZN,39.02,1.7,1466.705,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,1466.705
+ Lights Internal Gains Nominal, ROOM_2_FLR_3 ZN LARGEHOTEL GUESTROOM LIGHTS,LARGEHOTEL BLDG LIGHT,ROOM_2_FLR_3 ZN,39.02,1.7,1466.533,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,1466.533
+ Lights Internal Gains Nominal, ROOM_5_FLR_3 ZN LARGEHOTEL GUESTROOM LIGHTS,LARGEHOTEL BLDG LIGHT,ROOM_5_FLR_3 ZN,39.02,1.7,1466.705,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,1466.705
+ Lights Internal Gains Nominal, ROOM_6_FLR_3 ZN LARGEHOTEL GUESTROOM LIGHTS,LARGEHOTEL BLDG LIGHT,ROOM_6_FLR_3 ZN,39.02,1.7,1466.533,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,1466.533
+ Lights Internal Gains Nominal, ROOM_3_MULT19_FLR_3 ZN LARGEHOTEL GUESTROOM2 LIGHTS,LARGEHOTEL BLDG LIGHT,ROOM_3_MULT19_FLR_3 ZN,24.52,1.1,921.768,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,921.768
+ Lights Internal Gains Nominal, ROOM_4_MULT19_FLR_3 ZN LARGEHOTEL GUESTROOM2 LIGHTS,LARGEHOTEL BLDG LIGHT,ROOM_4_MULT19_FLR_3 ZN,24.53,1.1,922.020,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,922.020
+ Lights Internal Gains Nominal, ROOM_1_FLR_6 ZN LARGEHOTEL GUESTROOM3 LIGHTS,LARGEHOTEL BLDG LIGHT,ROOM_1_FLR_6 ZN,39.02,1.7,1466.705,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,1466.705
+ Lights Internal Gains Nominal, ROOM_2_FLR_6 ZN LARGEHOTEL GUESTROOM3 LIGHTS,LARGEHOTEL BLDG LIGHT,ROOM_2_FLR_6 ZN,39.02,1.7,1466.533,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,1466.533
+ Lights Internal Gains Nominal, ROOM_3_MULT9_FLR_6 ZN LARGEHOTEL GUESTROOM4 LIGHTS,LARGEHOTEL BLDG LIGHT,ROOM_3_MULT9_FLR_6 ZN,24.53,1.1,922.020,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,922.020
+ Lights Internal Gains Nominal, KITCHEN_FLR_6 ZN LARGEHOTEL KITCHEN LIGHTS,LARGEHOTEL BLDG LIGHT,KITCHEN_FLR_6 ZN,103.30,4.4,3882.863,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,3882.863
+ Lights Internal Gains Nominal, LAUNDRY_FLR_1 ZN LARGEHOTEL LAUNDRY LIGHTS,LARGEHOTEL BLDG LIGHT,LAUNDRY_FLR_1 ZN,78.04,3.4,2933.238,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,2933.238
+ Lights Internal Gains Nominal, LOBBY_FLR_1 ZN LARGEHOTEL LOBBY LIGHTS,LARGEHOTEL BLDG LIGHT,LOBBY_FLR_1 ZN,1308.19,56.3,49170.258,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,49170.258
+ Lights Internal Gains Nominal, MECH_FLR_1 ZN LARGEHOTEL MECHANICAL LIGHTS,LARGEHOTEL BLDG LIGHT,MECH_FLR_1 ZN,164.24,0.0,6173.342,37.587,N/A,0.000,0.000,0.000,1.000,1.000,General,0.000,6173.342
+ Lights Internal Gains Nominal, RETAIL_1_FLR_1 ZN LARGEHOTEL RETAIL LIGHTS,LARGEHOTEL BLDG LIGHT,RETAIL_1_FLR_1 ZN,67.07,2.9,2520.984,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,2520.984
+ Lights Internal Gains Nominal, RETAIL_2_FLR_1 ZN LARGEHOTEL RETAIL2 LIGHTS,LARGEHOTEL BLDG LIGHT,RETAIL_2_FLR_1 ZN,77.67,3.3,2919.309,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,2919.309
+ Lights Internal Gains Nominal, STORAGE_FLR_1 ZN LARGEHOTEL STORAGE LIGHTS,LARGEHOTEL BLDG LIGHT,STORAGE_FLR_1 ZN,94.76,4.1,3561.678,37.587,872.977,0.000,0.000,0.000,1.000,1.000,General,0.000,3561.678
+! <ElectricEquipment Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,End-Use SubCategory,Nominal Minimum Equipment Level {W},Nominal Maximum Equipment Level {W}
+ ElectricEquipment Internal Gains Nominal, BANQUET_FLR_6 ZN LARGEHOTEL BANQUET ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL KITCHEN_ELEC_EQUIP_SCH,BANQUET_FLR_6 ZN,331.66,14.3,22490.000,67.811,1574.960,0.000,0.500,0.000,0.500,General,0.000,7871.500
+ ElectricEquipment Internal Gains Nominal, DINING_FLR_6 ZN LARGEHOTEL BANQUET ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL KITCHEN_ELEC_EQUIP_SCH,DINING_FLR_6 ZN,331.66,14.3,22490.000,67.811,1574.960,0.000,0.500,0.000,0.500,General,0.000,7871.500
+ ElectricEquipment Internal Gains Nominal, BASEMENT ZN LARGEHOTEL BASEMENT ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL BLDG EQUIP,BASEMENT ZN,1978.83,85.2,19543.787,9.876,229.388,0.000,0.500,0.000,0.500,General,0.000,19543.787
+ ElectricEquipment Internal Gains Nominal, CAFE_FLR_1 ZN LARGEHOTEL CAFE ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL BLDG EQUIP,CAFE_FLR_1 ZN,188.86,8.1,1865.282,9.876,229.388,0.000,0.500,0.000,0.500,General,0.000,1865.282
+ ElectricEquipment Internal Gains Nominal, ROOM_1_FLR_3 ZN LARGEHOTEL GUESTROOM ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL GUESTROOM EQUIP,ROOM_1_FLR_3 ZN,39.02,1.7,385.398,9.876,229.388,0.000,0.500,0.000,0.500,General,0.000,385.398
+ ElectricEquipment Internal Gains Nominal, ROOM_2_FLR_3 ZN LARGEHOTEL GUESTROOM ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL GUESTROOM EQUIP,ROOM_2_FLR_3 ZN,39.02,1.7,385.353,9.876,229.388,0.000,0.500,0.000,0.500,General,0.000,385.353
+ ElectricEquipment Internal Gains Nominal, ROOM_5_FLR_3 ZN LARGEHOTEL GUESTROOM ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL GUESTROOM EQUIP,ROOM_5_FLR_3 ZN,39.02,1.7,385.398,9.876,229.388,0.000,0.500,0.000,0.500,General,0.000,385.398
+ ElectricEquipment Internal Gains Nominal, ROOM_6_FLR_3 ZN LARGEHOTEL GUESTROOM ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL GUESTROOM EQUIP,ROOM_6_FLR_3 ZN,39.02,1.7,385.353,9.876,229.388,0.000,0.500,0.000,0.500,General,0.000,385.353
+ ElectricEquipment Internal Gains Nominal, ROOM_3_MULT19_FLR_3 ZN LARGEHOTEL GUESTROOM2 ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL GUESTROOM EQUIP,ROOM_3_MULT19_FLR_3 ZN,24.52,1.1,242.208,9.876,229.388,0.000,0.500,0.000,0.500,General,0.000,242.208
+ ElectricEquipment Internal Gains Nominal, ROOM_4_MULT19_FLR_3 ZN LARGEHOTEL GUESTROOM2 ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL GUESTROOM EQUIP,ROOM_4_MULT19_FLR_3 ZN,24.53,1.1,242.274,9.876,229.388,0.000,0.500,0.000,0.500,General,0.000,242.274
+ ElectricEquipment Internal Gains Nominal, ROOM_1_FLR_6 ZN LARGEHOTEL GUESTROOM3 ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL GUESTROOM EQUIP,ROOM_1_FLR_6 ZN,39.02,1.7,385.398,9.876,229.388,0.000,0.500,0.000,0.500,General,0.000,385.398
+ ElectricEquipment Internal Gains Nominal, ROOM_2_FLR_6 ZN LARGEHOTEL GUESTROOM3 ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL GUESTROOM EQUIP,ROOM_2_FLR_6 ZN,39.02,1.7,385.353,9.876,229.388,0.000,0.500,0.000,0.500,General,0.000,385.353
+ ElectricEquipment Internal Gains Nominal, ROOM_3_MULT9_FLR_6 ZN LARGEHOTEL GUESTROOM4 ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL GUESTROOM EQUIP,ROOM_3_MULT9_FLR_6 ZN,24.53,1.1,242.274,9.876,229.388,0.000,0.500,0.000,0.500,General,0.000,242.274
+ ElectricEquipment Internal Gains Nominal, KITCHEN_FLR_6 ZN KITCHEN_FLR_6 EXHAUST FAN EQUIPMENT -22.3401079595 PERCENT REDUCTION,HOTELLARGE KITCHEN_EXHAUST_SCH,KITCHEN_FLR_6 ZN,103.30,4.4,689.000,6.670,154.907,0.000,0.000,1.000,0.000,General,0.000,689.000
+ ElectricEquipment Internal Gains Nominal, KITCHEN_FLR_6 ZN LARGEHOTEL KITCHEN ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL KITCHEN_ELEC_EQUIP_SCH,KITCHEN_FLR_6 ZN,103.30,4.4,52430.000,507.529,11787.744,0.200,0.500,0.100,0.200,General,0.000,18350.500
+ ElectricEquipment Internal Gains Nominal, LAUNDRY_FLR_1 ZN LARGEHOTEL LAUNDRY ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL LAUNDRYROOM EQUIP,LAUNDRY_FLR_1 ZN,78.04,3.4,4810.000,61.635,1431.531,0.000,0.500,0.000,0.500,General,0.000,4810.000
+ ElectricEquipment Internal Gains Nominal, LAUNDRY_FLR_1 ZN LAUNDRY_FLR_1 EXHAUST FAN EQUIPMENT -22.3401079595 PERCENT REDUCTION,ALWAYS ON,LAUNDRY_FLR_1 ZN,78.04,3.4,87.000,1.115,25.893,0.000,0.000,1.000,0.000,General,87.000,87.000
+ ElectricEquipment Internal Gains Nominal, LOBBY_FLR_1 ZN LARGEHOTEL LOBBY ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL BLDG EQUIP,LOBBY_FLR_1 ZN,1308.19,56.3,12920.215,9.876,229.388,0.000,0.500,0.000,0.500,General,0.000,12920.215
+ ElectricEquipment Internal Gains Nominal, MECH_FLR_1 ZN LARGEHOTEL MECHANICAL ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL BLDG EQUIP,MECH_FLR_1 ZN,164.24,0.0,1622.137,9.876,N/A,0.000,0.500,0.000,0.500,General,0.000,1622.137
+ ElectricEquipment Internal Gains Nominal, RETAIL_1_FLR_1 ZN LARGEHOTEL RETAIL ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL BLDG EQUIP,RETAIL_1_FLR_1 ZN,67.07,2.9,662.426,9.876,229.388,0.000,0.500,0.000,0.500,General,0.000,662.426
+ ElectricEquipment Internal Gains Nominal, RETAIL_2_FLR_1 ZN LARGEHOTEL RETAIL2 ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL BLDG EQUIP,RETAIL_2_FLR_1 ZN,77.67,3.3,767.092,9.876,229.388,0.000,0.500,0.000,0.500,General,0.000,767.092
+ ElectricEquipment Internal Gains Nominal, STORAGE_FLR_1 ZN LARGEHOTEL STORAGE ELEC EQUIP -22.3401079595 PERCENT REDUCTION,LARGEHOTEL BLDG EQUIP,STORAGE_FLR_1 ZN,94.76,4.1,935.884,9.876,229.388,0.000,0.500,0.000,0.500,General,0.000,935.884
+! <GasEquipment Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,End-Use SubCategory,Nominal Minimum Equipment Level {W},Nominal Maximum Equipment Level {W}
+ GasEquipment Internal Gains Nominal, KITCHEN_FLR_6 ZN LARGEHOTEL KITCHEN GAS EQUIP,LARGEHOTEL KITCHEN GAS,KITCHEN_FLR_6 ZN,103.30,4.4,166526.366,1611.996,37439.829,0.100,0.200,0.700,0.000,General,0.000,49957.910
+ GasEquipment Internal Gains Nominal, LAUNDRY_FLR_1 ZN LARGEHOTEL LAUNDRY GAS EQUIP,LARGEHOTEL LAUNDRYROOM GAS,LAUNDRY_FLR_1 ZN,78.04,3.4,41851.039,536.280,12455.520,0.000,0.500,0.000,0.500,General,0.000,41851.039
+! <Shadowing/Sun Position Calculations Annual Simulations>, Calculation Method, Value {days}, Allowable Number Figures in Shadow Overlap {}, Polygon Clipping Algorithm, Sky Diffuse Modeling Algorithm, External Shading Calculation Method, Output External Shading Calculation Results, Disable Self-Shading Within Shading Zone Groups, Disable Self-Shading From Shading Zone Groups to Other Zones
+Shadowing/Sun Position Calculations Annual Simulations,AverageOverDaysInFrequency,15000,15000,SutherlandHodgman,SimpleSkyDiffuseModeling,InternalCalculation,No,No,No
+! <#Detailed Refrigeration Systems>,Number of Detailed Refrigeration Systems
+! <Detailed Refrigeration System>,Refrigeration System Name,Refrigerant Used, # Refrigerated Cases Connected, # WalkInCoolers Connected, #Air Chillers Connected, # Secondary Loops Served, # Cascade Condensers Served, # Mechanical Subcoolers Served, # Compressors Connected, # Compression Stages, Intercooler Type, Intercooler Effectiveness, # Subcoolers Connected, Minimum Condensing Temperature (C)
+!  <Refrigeration Compressor>,Compressor Number,Compressor Name,Nominal Capacity (W)
+!  <Refrigeration Case>,Refrigeration Case Number, Refrigeration Case Name,Zone Name,Zone Node #,Zone Node Name,Capacity (W/m),LHR,Temperature (C),Length (m),Fan (W/m),Installed Lighting (W/m),Anti-Sweat (W/m),Defrost (W/m)
+!  <Refrigeration Condenser:Air-Cooled>,Condenser Number,Condenser Name,Rated Condensing Temperature (C),Rated Capacity (W), Rated Fan Power (W)
+#Detailed Refrigeration Systems,2
+ Detailed Refrigeration System,REFRIGERATION SYSTEM 1,R404A,1,0,0,0,0,0,1,1,0,0.80,0,21.0
+   Refrigeration Case,1,KITCHEN_FLR_6 ZN WALKIN FREEZER,KITCHEN_FLR_6 ZN,225,NODE 11,367.0,0.10,-23.0,7.3,34.0,16.4,0.0,273.0
+   Refrigeration Compressor,1,REFRIGERATION COMPRESSOR 1,14587
+   Refrigeration Condenser:Air-Cooled,1,REFRIGERATION CONDENSER AIR COOLED 1,51.7,363896.4,350.0
+ Detailed Refrigeration System,REFRIGERATION SYSTEM 2,R404A,1,0,0,0,0,0,1,1,0,0.80,0,21.0
+   Refrigeration Case,2,KITCHEN_FLR_6 ZN DISPLAY CASE,KITCHEN_FLR_6 ZN,225,NODE 11,734.0,8.00E-002,2.0,3.7,55.0,33.0,0.0,0.0
+   Refrigeration Compressor,2,REFRIGERATION COMPRESSOR 2,33153
+   Refrigeration Condenser:Air-Cooled,2,REFRIGERATION CONDENSER AIR COOLED 2,51.7,363896.4,750.0
+! <Water Heater Information>,Type,Name,Volume {m3},Maximum Capacity {W},Standard Rated Recovery Efficiency, Standard Rated Energy Factor
+! <ZoneInfiltration Airflow Stats Nominal>,Name,Schedule Name,Zone Name, Zone Floor Area {m2}, # Zone Occupants,Design Volume Flow Rate {m3/s},Volume Flow Rate/Floor Area {m3/s/m2},Volume Flow Rate/Exterior Surface Area {m3/s/m2},ACH - Air Changes per Hour,Equation A - Constant Term Coefficient {},Equation B - Temperature Term Coefficient {1/C},Equation C - Velocity Term Coefficient {s/m}, Equation D - Velocity Squared Term Coefficient {s2/m2}
+ ZoneInfiltration Airflow Stats Nominal, BANQUET_FLR_6 ZN LARGEHOTEL BANQUET INFILTRATION,LARGEHOTEL INFIL QUARTER ON,BANQUET_FLR_6 ZN,331.66,14.3,0.111,3.335E-004,2.577E-004,0.394,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, DINING_FLR_6 ZN LARGEHOTEL BANQUET INFILTRATION,LARGEHOTEL INFIL QUARTER ON,DINING_FLR_6 ZN,331.66,14.3,0.111,3.335E-004,2.577E-004,0.394,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, CAFE_FLR_1 ZN LARGEHOTEL CAFE INFILTRATION,LARGEHOTEL INFIL QUARTER ON,CAFE_FLR_1 ZN,188.86,8.1,0.173,9.136E-004,5.059E-004,0.830,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, CORRIDOR_FLR_6 ZN LARGEHOTEL CORRIDOR INFILTRATION,LARGEHOTEL INFIL QUARTER ON,CORRIDOR_FLR_6 ZN,412.12,17.7,9.691E-002,2.352E-004,1.948E-004,0.278,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, CORRIDOR_FLR_3 ZN LARGEHOTEL CORRIDOR2 INFILTRATION,LARGEHOTEL INFIL QUARTER ON,CORRIDOR_FLR_3 ZN,389.40,16.8,5.477E-002,1.407E-004,1.134E-003,0.166,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, ROOM_1_FLR_3 ZN LARGEHOTEL GUESTROOM INFILTRATION,LARGEHOTEL INFIL QUARTER ON,ROOM_1_FLR_3 ZN,39.02,1.7,4.530E-002,1.161E-003,1.134E-003,1.371,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, ROOM_2_FLR_3 ZN LARGEHOTEL GUESTROOM INFILTRATION,LARGEHOTEL INFIL QUARTER ON,ROOM_2_FLR_3 ZN,39.02,1.7,4.529E-002,1.161E-003,1.134E-003,1.371,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, ROOM_5_FLR_3 ZN LARGEHOTEL GUESTROOM INFILTRATION,LARGEHOTEL INFIL QUARTER ON,ROOM_5_FLR_3 ZN,39.02,1.7,4.530E-002,1.161E-003,1.134E-003,1.371,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, ROOM_6_FLR_3 ZN LARGEHOTEL GUESTROOM INFILTRATION,LARGEHOTEL INFIL QUARTER ON,ROOM_6_FLR_3 ZN,39.02,1.7,4.529E-002,1.161E-003,1.134E-003,1.371,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, ROOM_3_MULT19_FLR_3 ZN LARGEHOTEL GUESTROOM2 INFILTRATION,LARGEHOTEL INFIL QUARTER ON,ROOM_3_MULT19_FLR_3 ZN,24.52,1.1,1.264E-002,5.154E-004,1.134E-003,0.609,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, ROOM_4_MULT19_FLR_3 ZN LARGEHOTEL GUESTROOM2 INFILTRATION,LARGEHOTEL INFIL QUARTER ON,ROOM_4_MULT19_FLR_3 ZN,24.53,1.1,1.264E-002,5.154E-004,1.134E-003,0.609,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, ROOM_1_FLR_6 ZN LARGEHOTEL GUESTROOM3 INFILTRATION,LARGEHOTEL INFIL QUARTER ON,ROOM_1_FLR_6 ZN,39.02,1.7,4.530E-002,1.161E-003,5.736E-004,1.371,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, ROOM_2_FLR_6 ZN LARGEHOTEL GUESTROOM3 INFILTRATION,LARGEHOTEL INFIL QUARTER ON,ROOM_2_FLR_6 ZN,39.02,1.7,4.529E-002,1.161E-003,5.736E-004,1.371,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, ROOM_3_MULT9_FLR_6 ZN LARGEHOTEL GUESTROOM4 INFILTRATION,LARGEHOTEL INFIL QUARTER ON,ROOM_3_MULT9_FLR_6 ZN,24.53,1.1,2.318E-002,9.448E-004,5.154E-004,1.116,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, KITCHEN_FLR_6 ZN LARGEHOTEL KITCHEN INFILTRATION,LARGEHOTEL INFIL QUARTER ON,KITCHEN_FLR_6 ZN,103.30,4.4,9.902E-002,9.585E-004,5.194E-004,1.132,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, LAUNDRY_FLR_1 ZN LARGEHOTEL LAUNDRY INFILTRATION,LARGEHOTEL INFIL QUARTER ON,LAUNDRY_FLR_1 ZN,78.04,3.4,9.723E-002,1.246E-003,1.134E-003,1.132,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, LOBBY_FLR_1 ZN LARGEHOTEL LOBBY INFILTRATION,LARGEHOTEL INFIL QUARTER ON,LOBBY_FLR_1 ZN,1308.19,56.3,0.493,3.768E-004,7.248E-004,0.342,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, MECH_FLR_1 ZN LARGEHOTEL MECHANICAL INFILTRATION,LARGEHOTEL INFIL QUARTER ON,MECH_FLR_1 ZN,164.24,0.0,7.121E-002,4.335E-004,1.134E-003,0.394,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, RETAIL_1_FLR_1 ZN LARGEHOTEL RETAIL INFILTRATION,LARGEHOTEL INFIL QUARTER ON,RETAIL_1_FLR_1 ZN,67.07,2.9,7.805E-002,1.164E-003,5.743E-004,1.057,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, RETAIL_2_FLR_1 ZN LARGEHOTEL RETAIL2 INFILTRATION,LARGEHOTEL INFIL QUARTER ON,RETAIL_2_FLR_1 ZN,77.67,3.3,3.013E-002,3.879E-004,1.134E-003,0.352,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, STORAGE_FLR_1 ZN LARGEHOTEL STORAGE INFILTRATION,LARGEHOTEL INFIL QUARTER ON,STORAGE_FLR_1 ZN,94.76,4.1,4.108E-002,4.335E-004,1.134E-003,0.394,1.000,0.000,0.000,0.000
+! <AirFlow Model>, Simple
+ AirFlow Model, Simple
+! <RoomAir Model>, Zone Name, Mixing/Mundt/UCSDDV/UCSDCV/UCSDUFI/UCSDUFE/User Defined
+RoomAir Model,BANQUET_FLR_6 ZN,Mixing/Well-Stirred
+RoomAir Model,BASEMENT ZN,Mixing/Well-Stirred
+RoomAir Model,CAFE_FLR_1 ZN,Mixing/Well-Stirred
+RoomAir Model,CORRIDOR_FLR_3 ZN,Mixing/Well-Stirred
+RoomAir Model,CORRIDOR_FLR_6 ZN,Mixing/Well-Stirred
+RoomAir Model,DINING_FLR_6 ZN,Mixing/Well-Stirred
+RoomAir Model,KITCHEN_FLR_6 ZN,Mixing/Well-Stirred
+RoomAir Model,LAUNDRY_FLR_1 ZN,Mixing/Well-Stirred
+RoomAir Model,LOBBY_FLR_1 ZN,Mixing/Well-Stirred
+RoomAir Model,MECH_FLR_1 ZN,Mixing/Well-Stirred
+RoomAir Model,RETAIL_1_FLR_1 ZN,Mixing/Well-Stirred
+RoomAir Model,RETAIL_2_FLR_1 ZN,Mixing/Well-Stirred
+RoomAir Model,ROOM_1_FLR_3 ZN,Mixing/Well-Stirred
+RoomAir Model,ROOM_1_FLR_6 ZN,Mixing/Well-Stirred
+RoomAir Model,ROOM_2_FLR_3 ZN,Mixing/Well-Stirred
+RoomAir Model,ROOM_2_FLR_6 ZN,Mixing/Well-Stirred
+RoomAir Model,ROOM_3_MULT19_FLR_3 ZN,Mixing/Well-Stirred
+RoomAir Model,ROOM_3_MULT9_FLR_6 ZN,Mixing/Well-Stirred
+RoomAir Model,ROOM_4_MULT19_FLR_3 ZN,Mixing/Well-Stirred
+RoomAir Model,ROOM_5_FLR_3 ZN,Mixing/Well-Stirred
+RoomAir Model,ROOM_6_FLR_3 ZN,Mixing/Well-Stirred
+RoomAir Model,STORAGE_FLR_1 ZN,Mixing/Well-Stirred
+! <AirflowNetwork Model:Control>, No Multizone or Distribution/Multizone with Distribution/Multizone without Distribution/Multizone with Distribution only during Fan Operation
+AirflowNetwork Model:Control,NoMultizoneOrDistribution
+! <Zone Volume Capacitance Multiplier>, Sensible Heat Capacity Multiplier, Moisture Capacity Multiplier, Carbon Dioxide Capacity Multiplier, Generic Contaminant Capacity Multiplier
+Zone Volume Capacitance Multiplier,   1.000 ,   1.000,   1.000,   1.000
+! <Load Timesteps in Zone Design Calculation Averaging Window>, Value
+ Load Timesteps in Zone Design Calculation Averaging Window,    6
+! <Heating Sizing Factor Information>, Sizing Factor ID, Value
+ Heating Sizing Factor Information, Global,   1.2065    
+ Heating Sizing Factor Information, Zone BANQUET_FLR_6 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone BASEMENT ZN,   1.2065    
+ Heating Sizing Factor Information, Zone CAFE_FLR_1 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone CORRIDOR_FLR_3 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone CORRIDOR_FLR_6 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone DINING_FLR_6 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone KITCHEN_FLR_6 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone LAUNDRY_FLR_1 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone LOBBY_FLR_1 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone MECH_FLR_1 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone RETAIL_1_FLR_1 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone RETAIL_2_FLR_1 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone ROOM_1_FLR_3 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone ROOM_1_FLR_6 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone ROOM_2_FLR_3 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone ROOM_2_FLR_6 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone ROOM_3_MULT19_FLR_3 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone ROOM_3_MULT9_FLR_6 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone ROOM_4_MULT19_FLR_3 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone ROOM_5_FLR_3 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone ROOM_6_FLR_3 ZN,   1.2065    
+ Heating Sizing Factor Information, Zone STORAGE_FLR_1 ZN,   1.2065    
+! <Cooling Sizing Factor Information>, Sizing Factor ID, Value
+ Cooling Sizing Factor Information, Global,   1.3583    
+ Cooling Sizing Factor Information, Zone BANQUET_FLR_6 ZN,   1.3583    
+ Cooling Sizing Factor Information, Zone BASEMENT ZN,   1.3583    
